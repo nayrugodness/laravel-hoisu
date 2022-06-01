@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class RecetaControler extends Controller
 {
     public function hola(){
-        return "Desde receta controller";
+        return view('nosotros');
     }
 }
