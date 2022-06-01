@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/nosotros', 'RecetaController@hola');
+use App\Http\Controllers\RecetaController;
+Route::get('/' , [RecetaController::class,'hola']);
+Route::get('/nosotros' , [RecetaController::class,'hola']);
