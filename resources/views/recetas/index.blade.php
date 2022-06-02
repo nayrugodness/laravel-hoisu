@@ -1,3 +1,5 @@
+@extends('layouts.app');
+
 <h1>Recetas</h1>
 
 @foreach ( $recetas as $recetas )
