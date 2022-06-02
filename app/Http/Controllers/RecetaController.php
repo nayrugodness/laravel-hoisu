@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class RecetaController extends Controller
 {
     public function hola(){
-        return "funciona";
+        return view('recetas.index');
     }
 }
