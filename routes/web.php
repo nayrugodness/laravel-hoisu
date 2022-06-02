@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RecetaController;
 Route::get('/' , [RecetaController::class, 'hola']);
 Route::get('/recetas' , [RecetaController::class, 'hola']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
