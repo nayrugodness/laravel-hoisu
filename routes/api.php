@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/' , [RecetaController::class, 'hola']);
+Route::get('/recetas' , [RecetaController::class, 'hola']);
