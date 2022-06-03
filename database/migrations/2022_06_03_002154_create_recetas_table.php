@@ -17,6 +17,11 @@ class CreateRecetasTable extends Migration
         Schema::create('recetas', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
+            $table->string('ingredientes');
+            $table->string('preparacion');
+            $table->string('imagen');
+            $table->unsignedBigInteger('user_id')->index('user_id');
+            $table->unsignedBigInteger('categoria_id')->index('categoria_id');
             $table->timestamps();
         });
     }
