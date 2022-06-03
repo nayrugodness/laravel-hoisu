@@ -27,8 +27,8 @@ class CreateRecetasTable extends Migration
             $table->string('ingredientes');
             $table->string('preparacion');
             $table->string('imagen');
-            $table->unsignedBigInteger('user_id')->index('user_id');
-            $table->unsignedBigInteger('categoria_id')->index('categoria_id');
+            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('categoria_id')->references('id')->on('categoria_receta');
             $table->timestamps();
         });
     }
