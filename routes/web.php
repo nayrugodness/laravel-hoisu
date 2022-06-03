@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RecetaController;
 
 Route::get('/recetas' , [RecetaController::class, 'index']);
+Route::get('/recetas/create' , [RecetaController::class, 'create']);
 
 Auth::routes();
 
