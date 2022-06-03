@@ -14,6 +14,13 @@ class CreateRecetasTable extends Migration
      */
     public function up()
     {
+
+        Schema::create('categoria_receta', function(Blueprint $table ){
+            $table->id();
+            $table->string('nombre');
+            $table->timestamps();
+        });
+
         Schema::create('recetas', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
