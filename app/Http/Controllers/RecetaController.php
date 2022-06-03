@@ -42,7 +42,10 @@ class RecetaController extends Controller
      */
     public function store(Request $request)
     {
-        $data = request()->validate([]);
+        $data = request()->validate([
+            'categoria' => 'required',
+            'titulo' => 'required'
+        ]);
         DB::table('recetas')->insert(['titulo' => $data['titulo']]);
         
         return redirect()->action([RecetaController::class, 'index']);
