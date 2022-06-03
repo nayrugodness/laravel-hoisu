@@ -14,6 +14,12 @@ class CategoriasSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('categoria_receta')->insert(
+            [
+                'nombre'=>'Comida Mexicana',
+                'created_at'=>date('Y-m-d H:i:s'),
+                'updated_at'=>date('Y-m-d H:i:s')
+                ]
+        );
     }
 }
