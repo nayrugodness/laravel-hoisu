@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RecetaController extends Controller
 {
@@ -35,8 +36,9 @@ class RecetaController extends Controller
     public function store(Request $request)
     {
         $data = request();
-        DB::table('receta')->insert(['titulo' => $data['titulo']]);
-        dd($request->all());
+        DB::table('recetas')->insert(['titulo' => $data['titulo']]);
+        
+        return redirect()->action([RecetaController::class, 'index']);
     }
 
     /**
