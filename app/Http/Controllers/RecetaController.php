@@ -17,6 +17,7 @@ class RecetaController extends Controller
      */
     public function index()
     {
+        DB::table('categoria_receta')->get()->dd();
         return view('recetas.index');
     }
 
