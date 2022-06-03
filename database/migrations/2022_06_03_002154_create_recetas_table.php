@@ -26,7 +26,6 @@ class CreateRecetasTable extends Migration
             $table->string('titulo');
             $table->string('ingredientes');
             $table->string('preparacion');
-            $table->string('imagen');
             $table->foreignId('user_id')->references('id')->on('users');
             $table->foreignId('categoria_id')->references('id')->on('categoria_receta');
             $table->timestamps();

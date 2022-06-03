@@ -21,7 +21,7 @@
 
     <div class="row justify-content-center mt-5">
         <div class="col-md-8">
-            <form method="POST" action="{{ route('recetas.store') }}" novalidate>
+            <form method="POST" enctype="multipart/form-data" action="{{ route('recetas.store') }}">
                 @csrf
                 <div class="form-group">
                     <label for="titulo">
@@ -42,7 +42,7 @@
                     <select name="categoria"
                             class="form-control"
                             id="categoria">
-                            <option value=""><-- Sellecione una categoria --></option>
+                            <option value=""><-- Selecione una categoria --></option>
                         @foreach ($categorias as $id => $categoria)
                             <option value="{{ $id }}"
                                 {{ old('categoria' == $id ? 'selected' : '')}}
@@ -78,6 +78,11 @@
                         Imagen
                     </label>
                     <input id="imagen" type="file" name="imagen" value="{{ old('imagen') }}">
+                    @error('imagen')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
 
                 <div class="form-group" >

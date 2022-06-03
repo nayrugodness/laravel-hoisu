@@ -43,18 +43,22 @@ class RecetaController extends Controller
      */
     public function store(Request $request)
     {
-        $data = request()->validate([
+
+     
+
+        $data = $request->validate([
             'categoria' => 'required',
             'titulo' => 'required',
             'preparacion' => 'required',
             'ingredientes' => 'required',
-            'imagen' => 'required|image'
+            'imagen' =>  'required|image|size:1000'
+          
         ]);
         DB::table('recetas')->insert([
             'titulo' => $data['titulo'],
             'preparacion' => $data['preparacion'],
             'ingredientes' => $data['ingredientes'],
-            'imagen' => 'imagen.jpg',
+            
             'user_id' => Auth::user()->id,
             'categoria_id'=> $data['categoria']
         ]);
