@@ -65,6 +65,21 @@
                     <trix-editor input="preparacion"></trix-editor>
                 </div>
 
+                <div class="form-group mt-3">
+                    <label for="ingredientes">
+                        ingredientes
+                    </label>
+                    <input id="ingredientes" type="hidden" name="ingredientes" value="{{ old('ingredientes') }}">
+                    <trix-editor input="ingredientes"></trix-editor>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="imagen">
+                        Imagen
+                    </label>
+                    <input id="imagen" type="file" name="imagen" value="{{ old('imagen') }}">
+                </div>
+
                 <div class="form-group" >
                     <input 
                         type="submit"
