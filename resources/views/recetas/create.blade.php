@@ -29,7 +29,7 @@
                         id="titulo"
                         placeholder="Titulo receta">
                 </div>
-                <div class="form-group">
+                <div class="form-group" action="{{ route('recetas.store') }}">
                     <input 
                         type="submit"
                         class="btn btn-primary"
