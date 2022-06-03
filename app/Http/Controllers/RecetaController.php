@@ -34,6 +34,8 @@ class RecetaController extends Controller
      */
     public function store(Request $request)
     {
+        $data = request();
+        DB::table('receta')->insert(['titulo' => $data['titulo']]);
         dd($request->all());
     }
 
