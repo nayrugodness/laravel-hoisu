@@ -36,6 +36,20 @@
                         class="btn btn-primary"
                         value="Agregar receta">
                 </div>
+                <div class="form-group">
+                    <label for="categoria">
+                        Categoria
+                    </label>
+                    <select name="categoria"
+                            class="form-control"
+                            id="categoria">
+                        @foreach ($categorias as $id => $categoria)
+                            <option value="{{ $id }}">
+                                {{ $categoria }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
             </form>
         </div>
     </div>
