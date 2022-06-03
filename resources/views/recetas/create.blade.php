@@ -55,6 +55,14 @@
                             <strong>{{ $message }}</strong>
 
                         </span>
+                    @enderror   
+                </div>
+                <div class="form-group mt-3">
+                    <label for="preparacion">
+                        Preparación
+                    </label>
+                    <input id="preparacion" type="hidden" name="preparacion" value="{{ old('preparacion') }}">
+                    <trix-editor input="preparacion"></trix-editor>
                 </div>
 
                 <div class="form-group" >
